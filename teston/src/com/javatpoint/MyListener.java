@@ -3,7 +3,7 @@ import javax.servlet.*;
 import java.sql.*;
 
 public class MyListener implements ServletContextListener{
-// DHANANJAY fvfgfgfgfgf
+// DHANANJAY fvfgfgfgfgf  
 	public void contextInitialized(ServletContextEvent arg0) {
 		
 		Connection con=null;
