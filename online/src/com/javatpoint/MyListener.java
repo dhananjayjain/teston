@@ -1,7 +1,8 @@
 package com.javatpoint;
 import javax.servlet.*;
 import java.sql.*;
-// DHAAN
+// DHAAN 
+//SECOND
 public class MyListener implements ServletContextListener{
 
 	public void contextInitialized(ServletContextEvent arg0) {
