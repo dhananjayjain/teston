@@ -9,6 +9,9 @@ import java.sql.*;
 // EIRGTH MASTER
 // FIFTH WITH NEW BRANCH 
 // SIX COMMIT IN NEW BRANCH
+
+// NEW CODE START IN STAGING BRANCH
+
 public class MyListener implements ServletContextListener{
 
 	public void contextInitialized(ServletContextEvent arg0) {
@@ -57,8 +60,8 @@ public class MyListener implements ServletContextListener{
 	}
 		
 	    catch(Exception e){
+	    	System.out.println("IF TABLE NOT CREATED ="+e.getMessage()	);
 	    	e.printStackTrace();
-	    	
 	    }
 	    }
 	    
