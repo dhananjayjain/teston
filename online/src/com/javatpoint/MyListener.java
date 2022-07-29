@@ -71,6 +71,7 @@ public class MyListener implements ServletContextListener{
 		System.out.println("Start deployement and start project");
 		//===========================================================================
 		
+<<<<<<< refs/remotes/origin/dhananjay
 		// NEW DEVELOPMENT START
 		
 		String sql = "SELECT id, username FROM users WHERE id = ?";
@@ -92,5 +93,9 @@ public class MyListener implements ServletContextListener{
 	      throw new Error("Problem", e);
 	    } 
 		//  Now again commit in branch--------------------------------------------------------
+=======
+		// Seperate commit in Staging
+		
+>>>>>>> Start development in staging
 	}
 }
