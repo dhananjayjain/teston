@@ -15,13 +15,16 @@ public class MyListener implements ServletContextListener{
 		
 		Connection con=null;
 	try{
-		ResultSet rs;
+		ResultSet rs=null;
 		Class.forName("oracle.jdbc.driver.OracleDriver");
 		con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","oracle");
-		
-		PreparedStatement ps1=con.prepareStatement("Select * from QUIZCONTACT");
-		
-		rs=ps1.executeQuery();
+		if(null==con) {
+			System.out.println("DATABASE CONNECTED..............");
+			PreparedStatement ps1=con.prepareStatement("Select * from QUIZCONTACT");
+			rs=ps1.executeQuery();
+		}
+		else 
+			System.out.println("NODATABASE");
 		if(rs.next())
 		{System.out.println("your table name already exist");}
 		else 
@@ -61,6 +64,8 @@ public class MyListener implements ServletContextListener{
 	    
 	    public void contextDestroyed(ServletContextEvent arg0) {
 		System.out.println("project undeployed");
+		
+		System.out.println("Start deployement and start project");
 		
 	}
 }
